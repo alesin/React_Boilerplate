@@ -14,15 +14,16 @@ module.exports = {
         extensions: ['.js', '.jsx']
       },
     module: {
-      rules: [
-        {
-          test: /\.jsx$/,
-          include: resolve(__dirname, './app'),
-        //   exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader'
-          }
-        }
-      ]
+        rules: [
+            {
+                test: /\.jsx?$/,
+                include: resolve(__dirname, './app'),
+                //   exclude: /node_modules/,
+                loader: 'babel-loader',
+            //   use: {
+            //     loader: 'babel-loader'
+            //   }
+            }
+        ]
     }
   }
