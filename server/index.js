@@ -11,3 +11,6 @@ app.use(express.urlencoded({ extended: true }))
 
 // *** STATIC middleware
 app.use(express.static(path.join(__dirname, '../public')))
+
+// *** connect ROUTES ==> mounted on /api
+app.use('/api', require('./api')
