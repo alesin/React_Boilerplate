@@ -18,11 +18,11 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 include: resolve(__dirname, './app'),
-                //   exclude: /node_modules/,
+                // exclude: /node_modules/,
                 loader: 'babel-loader',
-            //   use: {
-            //     loader: 'babel-loader'
-            //   }
+                // use: {
+                // loader: 'babel-loader'
+                // }
             }
         ]
     }
