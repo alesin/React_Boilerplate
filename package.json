@@ -1,0 +1,11 @@
+{
+  "name": "the_boiler_plate",
+  "version": "1.0.0",
+  "description": "A boilerplate starter for projects using React, Redux, Express, Sequelize, Authentication, OAuth2, and Test-Driven Dev.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Alesin Tygrys Tipler",
+  "license": "ISC"
+}
