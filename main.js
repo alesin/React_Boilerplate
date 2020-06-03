@@ -1,3 +1,5 @@
+'use strict'
+
 const app = require('./server')
 
 // *** very useful setup for deployment on Heroku!
