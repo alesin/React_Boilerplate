@@ -4,6 +4,9 @@
   "description": "A boilerplate starter for projects using React, Redux, Express, Sequelize, Authentication, OAuth2, and Test-Driven Dev.",
   "main": "index.js",
   "scripts": {
+    "start-dev": "npm run build-watch & npm run start-server",
+    "start-server": "nodemon main.js",
+    "build-watch": "webpack -w",
     "test": "test"
   },
   "author": "Alesin Tygrys Tipler",
@@ -20,6 +23,7 @@
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
     "babel-loader": "^8.1.0",
+    "nodemon": "^2.0.4",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   }
