@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const path = require('path')
-const morgan = require('morgan');  // *** LOGGING middleware
+const morgan = require('morgan')  // *** LOGGING middleware
 
 app.use(morgan('dev'))   // *** LOGGING middleware
 // app.use(morgan(':method :url :status :res[content-length] - :response-time ms'))  // *** Customize MORGAN logging
