@@ -1,14 +1,23 @@
 'use strict'
 
+if (process.env.NODE_ENV === 'development') {
+  require('./localSecrets');
+}
+
 const {db} = require('./server/db')
 const app = require('./server')
 
 // *** very useful setup for deployment on Heroku!
 const port = process.env.PORT || 3040
 
+console.log(`
+  The Node Env: ${process.env.NODE_ENV}
+  SECRETS attached succesfully: ${process.env.GOOGLE_CALLBACK_URL}
+  `)
+
 db.sync()
   .then(() => {
-    console.log('db synced')
+    console.log('> db synced <')
     app.listen(port, () => {
       console.log(`
       Knock, knock
