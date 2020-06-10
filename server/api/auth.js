@@ -33,3 +33,15 @@ router.post('/signup', async (req, res, next) => {
         next(error)
     }
 })
+
+router.delete('/logout', (req, res) => {
+    // *** PASSPORT middleware
+    // *** http://www.passportjs.org/docs/logout/
+    req.logout()
+    // *** SESSION middleware: DELETE whole session
+  // *** https://www.npmjs.com/package/express-session#sessiondestroycallback
+    req.session.destroy((error) => {
+        if (error) return next(error)
+        res.sendStatus(204)
+    })
+})
