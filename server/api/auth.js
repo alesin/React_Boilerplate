@@ -2,6 +2,19 @@ const router = require('express').Router()
 const {User} = require('../db')
 module.exports = router
 
+router.get('/me', async (req, res, next) => {
+    try {
+        if (req.user) {
+            res.json(req.user)
+        }
+        else {
+            res.sendStatus(404)
+        }
+    } catch (error) {
+        next(error)
+    }
+})
+
 router.put('/login', async (req, res, next) => {
     try {
         const user = await User.findOne({
@@ -34,7 +47,7 @@ router.post('/signup', async (req, res, next) => {
     }
 })
 
-router.delete('/logout', (req, res) => {
+router.delete('/logout', (req, res, next) => {
     // *** PASSPORT middleware
     // *** http://www.passportjs.org/docs/logout/
     req.logout()
