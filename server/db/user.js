@@ -34,6 +34,9 @@ const User = db.define('user', {
     },
     name: {
         type: Sequelize.STRING
+    },
+    googleId: {
+        type: Sequelize.STRING
     }
 }, {
     hooks: {

@@ -58,3 +58,6 @@ router.delete('/logout', (req, res, next) => {
         res.sendStatus(204)
     })
 })
+
+// ^^^ ROUTE requests for GOOGLE login
+router.use('/google', require('./oauth'))
