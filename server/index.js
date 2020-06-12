@@ -42,7 +42,9 @@ passport.serializeUser((user, done) => {
 // *** Since we have 'serialized' user on session (with an id), use the id to find user and attach the user Obj to req.user
 passport.deserializeUser(async (id, done) => {
     try {
-        const user = await User.findById(id)
+        console.log("User ID: ", id)
+        const user = await User.findByPk(id)
+        console.log("My user on passport session: ", user.dataValues)
         done(null, user)
     } catch (error) {
         done(error)

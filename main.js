@@ -16,6 +16,7 @@ console.log(`
   `)
 
 db.sync()
+// db.sync({ force: true })  // *** <== for a hard reset
   .then(() => {
     console.log('> db synced <')
     app.listen(port, () => {

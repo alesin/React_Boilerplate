@@ -21,7 +21,10 @@ module.exports = {
                 // exclude: /node_modules/,
                 loader: 'babel-loader',
                 // use: {
-                // loader: 'babel-loader'
+                //   loader: 'babel-loader',
+                //   options: {
+                //     presets: ['env']
+                //   }
                 // }
             },
             {

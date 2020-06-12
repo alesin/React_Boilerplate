@@ -49,7 +49,7 @@ const User = db.define('user', {
 User.prototype.checkPassword = function (submittedPassword) {
     //return true of false if the password matched the one on file
     // this.hashPassword(submittedPassword, this.salt)
-    return this.password === this.User.hashPassword(submittedPassword, this.salt)
+    return this.password === User.hashPassword(submittedPassword, this.salt)
 }
 
 // *** CLASS METHODS

@@ -6,12 +6,12 @@ import { Provider } from 'react-redux'
 
 import store from './store'
 //! ROUTES to React components GO HERE!
-// import Routes from './components/Routes'
+import Routes from './components/Routes'
 
 render(
     <Provider store={store}>
-        <div>Howdy, folks!</div>
         {/* Rest of the app (or routes for components) goes here! */}
+        <Routes />
     </Provider>,
     document.getElementById('app')
 )

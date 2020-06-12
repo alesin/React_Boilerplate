@@ -7,7 +7,8 @@
     "start-dev": "npm run build-watch & npm run start-server",
     "start-server": "NODE_ENV=development nodemon main.js",
     "build-watch": "webpack -w",
-    "test": "test"
+    "test": "test",
+    "seed": "node seed.js"
   },
   "author": "Alesin Tygrys Tipler",
   "license": "ISC",
@@ -34,7 +35,9 @@
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
+    "@babel/register": "^7.10.1",
     "babel-loader": "^8.1.0",
+    "core-js": "^3.6.5",
     "css-loader": "^3.5.3",
     "nodemon": "^2.0.4",
     "style-loader": "^1.2.1",

@@ -4,7 +4,7 @@ import axios from 'axios'
 const GOT_USERS = 'GOT_USERS'
 
 // *** ACTION CREATORS
-export const gotUsers = (users) = ({
+export const gotUsers = (users) => ({
     type: GOT_USERS,
     users
 })
