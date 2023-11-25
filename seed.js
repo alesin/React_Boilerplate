@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV === 'development') {
+  require('./localSecrets')
+}
+
 const {db, User} = require('./server/db')
 
 const seed = async () => {
@@ -36,7 +40,8 @@ const seed = async () => {
       Seed success!
     `)
     db.close()
-  } catch (err) {
+  }
+  catch (err) {
     console.error(`
       Oh noes!
     `)
