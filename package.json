@@ -8,7 +8,8 @@
     "start-server": "NODE_ENV=development nodemon main.js",
     "build-watch": "webpack -w",
     "test": "test",
-    "seed": "node seed.js"
+    "seed": "node seed.js",
+    "seed-dev": "NODE_ENV=development node seed.js"
   },
   "author": "Alesin Tygrys Tipler",
   "license": "ISC",
